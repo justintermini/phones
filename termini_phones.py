@@ -33,11 +33,11 @@ elif len(name_list) > 2:
     print("Error: Please list just one name.")
 
 
-Output for testing
-print(name_list)
-print(name_list[0])
-print(len(name_list))
-print(last_name.title())
+#Output for testing
+#print(name_list)
+#print(name_list[0])
+#print(len(name_list))
+#print(last_name.title())
 
 
 
