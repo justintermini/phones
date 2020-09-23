@@ -2,13 +2,16 @@ def first_and_last():
     for line in f:
         line = line.lower()
         if first_name in line:
-            print(line.title())
+            output = line.split()
+            print(output[0].title() + " " + output[1].title() + ", " + output[2])
+            
 
 def last_only():
     for line in f:
         line = line.lower()
         if last_name in line:
-            print(line.title())
+            output = line.split()
+            print(output[0].title() + " " + output[1].title() + ", " + output[2])
 
 # Open phone file in 'read' format
 f = open("phones.txt", 'r')
