@@ -9,9 +9,12 @@ def first_and_last():
 def last_only():
     for line in f:
         line = line.lower()
-        if last_name in line:
-            output = line.split()
-            print(output[0].title() + " " + output[1].title() + ", " + output[2])
+        name_list = line.split()
+        first = name_list[0]
+        last = name_list[1]
+        phone = name_list[2]
+        if last_name in last:
+            print(first.title() + " " + last.title() + ", " + phone)
 
 # Open phone file in 'read' format
 f = open("phones.txt", 'r')
@@ -33,7 +36,7 @@ elif len(name_list) == 1:
     last_only()
 
 elif len(name_list) > 2:
-    print("Error: Please list just one name.")
+    print("[+] Error: Please list just one name.")
 
 
 #Output for testing
