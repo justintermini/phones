@@ -1,12 +1,18 @@
+
 def first_and_last():
+    """Test first and last name against input file and output matches if found."""
     for line in f:
         line = line.lower()
-        if first_name in line:
-            output = line.split()
-            print(output[0].title() + " " + output[1].title() + ", " + output[2])
+        line = line.lower()
+        name_list = line.split()
+        first = name_list[0]
+        last = name_list[1]
+        phone = name_list[2]
+        if first in line & last in line:
+            print(first.title() + " " + last.title() + ", " + phone)
             
-
 def last_only():
+    """Test last name only again inpu file and output matches if found."""
     for line in f:
         line = line.lower()
         name_list = line.split()
@@ -38,12 +44,6 @@ elif len(name_list) == 1:
 elif len(name_list) > 2:
     print("[+] Error: Please list just one name.")
 
-
-#Output for testing
-#print(name_list)
-#print(name_list[0])
-#print(len(name_list))
-#print(last_name.title())
 
 
 
